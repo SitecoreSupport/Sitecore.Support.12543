@@ -8,11 +8,14 @@
   using Sitecore.XA.Foundation.Grid.Fields.FieldRenderers;
   using Sitecore.XA.Foundation.Grid.Parser;
   using Sitecore.XA.Foundation.SitecoreExtensions.Services;
+  using System.Collections.Concurrent;
   using System.Collections.Generic;
 
-  public class GridDefinition: Sitecore.XA.Foundation.Grid.Model.GridDefinition
+  public class GridDefinition : Sitecore.XA.Foundation.Grid.Model.GridDefinition
   {
-    private static Dictionary<string, IGridFieldParser> parsers = new Dictionary<string, IGridFieldParser>();
+    #region Modified code
+    private static ConcurrentDictionary<string, IGridFieldParser> parsers = new ConcurrentDictionary<string, IGridFieldParser>();
+    #endregion
 
     public GridDefinition(Item item) : base(item) { }
 
@@ -27,7 +30,9 @@
         return parsers[GridFieldParserType];
       }
       IGridFieldParser gridFieldParser = ServiceLocator.ServiceProvider.GetService<IReflectionService>().Instantiate<IGridFieldParser>(GridFieldParserType, Item);
-      parsers.Add(GridFieldParserType, gridFieldParser);
+      #region Modified code
+      parsers.TryAdd(GridFieldParserType, gridFieldParser);
+      #endregion
       return gridFieldParser;
     }
   }

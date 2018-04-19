@@ -18,7 +18,7 @@
       {
         return null;
       }
-      GridDefinition gridDefinition = new GridDefinition(gridDefinitionItem);
+      Sitecore.Support.XA.Foundation.Grid.Model.GridDefinition gridDefinition = new Sitecore.Support.XA.Foundation.Grid.Model.GridDefinition(gridDefinitionItem);
       IGridFieldParser parser = gridDefinition.InstantiateGridFieldParser();
       return Enumerable.Range(0, GetPlaceholdersCount()).Select(delegate (int col)
       {
