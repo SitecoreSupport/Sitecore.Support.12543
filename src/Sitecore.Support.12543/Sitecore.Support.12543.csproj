@@ -99,6 +99,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="XA\Foundation\Grid\Fields\FieldTypes\AbstractGridParametersField.cs" />
     <Compile Include="XA\Feature\CreativeExchange\Pipelines\Import\PageProcessing\GetGridDefinitionClasses.cs" />
     <Compile Include="XA\Feature\CreativeExchange\Pipelines\Import\RenderingProcessing\GridStylesImporter.cs" />
     <Compile Include="XA\Foundation\Grid\Commands\ShowGridPropertiesDialog.cs" />
