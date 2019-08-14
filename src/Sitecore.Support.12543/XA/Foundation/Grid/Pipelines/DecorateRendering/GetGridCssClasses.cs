@@ -2,7 +2,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using Sitecore.DependencyInjection;
 using Sitecore.XA.Foundation.Grid;
-using Sitecore.XA.Foundation.Grid.Model;
 using Sitecore.XA.Foundation.Grid.Parser;
 using Sitecore.XA.Foundation.MarkupDecorator.Pipelines.DecorateRendering;
 
@@ -15,7 +14,7 @@ namespace Sitecore.Support.XA.Foundation.Grid.Pipelines.DecorateRendering
       var gridDefinitionItem = ServiceLocator.ServiceProvider.GetService<IGridContext>().GetGridDefinitionItem(args.Rendering.Item, Context.Device);
       if (gridDefinitionItem != null)
       {
-        var gridDefinition = new GridDefinition(gridDefinitionItem);
+        var gridDefinition = new Sitecore.Support.XA.Foundation.Grid.Model.GridDefinition(gridDefinitionItem);
         IGridFieldParser parser = gridDefinition.InstantiateGridFieldParser();
 
         var rawFieldValue = args.Rendering.Parameters[Sitecore.XA.Foundation.Grid.Constants.GridParametersFieldName];
