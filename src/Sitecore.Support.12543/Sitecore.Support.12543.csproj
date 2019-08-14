@@ -54,6 +54,10 @@
       <HintPath>..\packages\SC.Sitecore.Kernel.8.2.6\lib\Sitecore.Kernel.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Sitecore.XA.Feature.CreativeExchange, Version=2.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SXA82.Sitecore.XA.Feature.CreativeExchange.1.6.0\lib\Sitecore.XA.Feature.CreativeExchange.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Sitecore.XA.Foundation.Common">
       <HintPath>..\packages\SXA82.Sitecore.XA.Foundation.Common.1.6.0\lib\Sitecore.XA.Foundation.Common.dll</HintPath>
       <Private>False</Private>
@@ -95,6 +99,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="XA\Feature\CreativeExchange\Pipelines\Import\RenderingProcessing\GridStylesImporter.cs" />
     <Compile Include="XA\Foundation\Grid\Commands\ShowGridPropertiesDialog.cs" />
     <Compile Include="XA\Foundation\Grid\Commands\SetGridValues.cs" />
     <Compile Include="XA\Foundation\Grid\Pipelines\DecorateRendering\GetGridCssClasses.cs" />
