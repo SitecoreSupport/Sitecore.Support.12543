@@ -5,7 +5,6 @@ using Sitecore.DependencyInjection;
 using Sitecore.Diagnostics;
 using Sitecore.XA.Foundation.Grid;
 using Sitecore.XA.Foundation.Grid.Fields.FieldRenderers;
-using Sitecore.XA.Foundation.Grid.Model;
 using Sitecore.XA.Foundation.SitecoreExtensions.Extensions;
 using Sitecore.XA.Foundation.SitecoreExtensions.Services;
 
@@ -26,7 +25,7 @@ namespace Sitecore.Support.XA.Foundation.Grid.Fields.FieldTypes
       {
         if (gridDefinitionItem.InheritsFrom(Templates.GridDefinition.ID))
         {
-          return new GridDefinition(gridDefinitionItem).InstantiateFieldRenderer();
+          return new Sitecore.Support.XA.Foundation.Grid.Model.GridDefinition(gridDefinitionItem).InstantiateFieldRenderer();
         }
         Log.Error($"Linked grid definition item with itemId:{gridDefinitionItem.ID} has incorrect template", this);
         return null;
