@@ -4,18 +4,13 @@
   using Sitecore.Data.Items;
   using Sitecore.DependencyInjection;
   using Sitecore.StringExtensions;
-  using Sitecore.XA.Foundation.Grid;
-  using Sitecore.XA.Foundation.Grid.Fields.FieldRenderers;
   using Sitecore.XA.Foundation.Grid.Parser;
   using Sitecore.XA.Foundation.SitecoreExtensions.Services;
   using System.Collections.Concurrent;
-  using System.Collections.Generic;
 
   public class GridDefinition : Sitecore.XA.Foundation.Grid.Model.GridDefinition
   {
-    #region Modified code
-    private static ConcurrentDictionary<string, IGridFieldParser> parsers = new ConcurrentDictionary<string, IGridFieldParser>();
-    #endregion
+    private static readonly ConcurrentDictionary<string, IGridFieldParser> parsers = new ConcurrentDictionary<string, IGridFieldParser>();
 
     public GridDefinition(Item item) : base(item) { }
 
@@ -25,14 +20,14 @@
       {
         return null;
       }
-      if (parsers.ContainsKey(GridFieldParserType))
+
+      IGridFieldParser gridFieldParser;
+      if (parsers.TryGetValue(GridFieldParserType, out gridFieldParser))
       {
-        return parsers[GridFieldParserType];
+        return gridFieldParser;
       }
-      IGridFieldParser gridFieldParser = ServiceLocator.ServiceProvider.GetService<IReflectionService>().Instantiate<IGridFieldParser>(GridFieldParserType, Item);
-      #region Modified code
+      gridFieldParser = ServiceLocator.ServiceProvider.GetService<IReflectionService>().Instantiate<IGridFieldParser>(GridFieldParserType, Item);
       parsers.TryAdd(GridFieldParserType, gridFieldParser);
-      #endregion
       return gridFieldParser;
     }
   }
