@@ -4,7 +4,6 @@
   using Sitecore;
   using Sitecore.Data.Items;
   using Sitecore.XA.Foundation.Grid;
-  using Sitecore.XA.Foundation.Grid.Model;
   using Sitecore.XA.Foundation.Grid.Parser;
   using System.Collections.Generic;
   using System.Linq;
@@ -18,7 +17,7 @@
       {
         return null;
       }
-      Sitecore.Support.XA.Foundation.Grid.Model.GridDefinition gridDefinition = new Sitecore.Support.XA.Foundation.Grid.Model.GridDefinition(gridDefinitionItem);
+      var gridDefinition = new Sitecore.Support.XA.Foundation.Grid.Model.GridDefinition(gridDefinitionItem);
       IGridFieldParser parser = gridDefinition.InstantiateGridFieldParser();
       return Enumerable.Range(0, GetPlaceholdersCount()).Select(delegate (int col)
       {

@@ -2,7 +2,7 @@
 using Sitecore.DependencyInjection;
 using Sitecore.XA.Foundation.DynamicPlaceholders.Repositories;
 
-namespace Support
+namespace Sitecore.Support
 {
   public class RegisterDependencies : IServicesConfigurator
   {
