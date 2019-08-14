@@ -10,7 +10,6 @@ using Sitecore.Text;
 using Sitecore.Web;
 using Sitecore.XA.Feature.CreativeExchange.Pipelines.Import.RenderingProcessing;
 using Sitecore.XA.Foundation.Grid;
-using Sitecore.XA.Foundation.Grid.Model;
 using Sitecore.XA.Foundation.Grid.Parser;
 
 namespace Sitecore.Support.XA.Feature.CreativeExchange.Pipelines.Import.RenderingProcessing
@@ -46,7 +45,7 @@ namespace Sitecore.Support.XA.Feature.CreativeExchange.Pipelines.Import.Renderin
 
       var device = args.Page.Database.GetItem(args.ImportContext.DeviceId);
       var gridDefinitionItem = ServiceLocator.ServiceProvider.GetService<IGridContext>().GetGridDefinitionItem(args.Page, device);
-      parameters[gridParamsField] = new GridDefinition(gridDefinitionItem).InstantiateGridFieldParser().ToFieldValue(classes.Select(c => c.Id));
+      parameters[gridParamsField] = new Sitecore.Support.XA.Foundation.Grid.Model.GridDefinition(gridDefinitionItem).InstantiateGridFieldParser().ToFieldValue(classes.Select(c => c.Id));
 
       renderingDefinition.Parameters = new UrlString(parameters).GetUrl();
 
