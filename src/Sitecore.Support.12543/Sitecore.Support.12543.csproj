@@ -58,6 +58,10 @@
       <HintPath>..\packages\SXA82.Sitecore.XA.Feature.CreativeExchange.1.6.0\lib\Sitecore.XA.Feature.CreativeExchange.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Sitecore.XA.Feature.PageStructure, Version=2.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SXA82.Sitecore.XA.Feature.PageStructure.1.6.0\lib\Sitecore.XA.Feature.PageStructure.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Sitecore.XA.Foundation.Common">
       <HintPath>..\packages\SXA82.Sitecore.XA.Foundation.Common.1.6.0\lib\Sitecore.XA.Foundation.Common.dll</HintPath>
       <Private>False</Private>
@@ -99,6 +103,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="XA\Feature\PageStructure\Repositories\SplitterRepository.cs" />
     <Compile Include="XA\Foundation\Grid\Fields\FieldTypes\AbstractGridParametersField.cs" />
     <Compile Include="XA\Feature\CreativeExchange\Pipelines\Import\PageProcessing\GetGridDefinitionClasses.cs" />
     <Compile Include="XA\Feature\CreativeExchange\Pipelines\Import\RenderingProcessing\GridStylesImporter.cs" />
