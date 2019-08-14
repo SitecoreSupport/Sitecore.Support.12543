@@ -6,7 +6,6 @@ using Sitecore.Data;
 using Sitecore.Layouts;
 using Sitecore.Shell.Framework.Commands;
 using Sitecore.XA.Foundation.Grid;
-using Sitecore.XA.Foundation.Grid.Model;
 
 namespace Sitecore.Support.XA.Foundation.Grid.Commands
 {
@@ -23,7 +22,7 @@ namespace Sitecore.Support.XA.Foundation.Grid.Commands
 
       if (gridSettings.Any())
       {
-        parameters[fieldName] = new GridDefinition(gridDefinitionItem).InstantiateGridFieldParser().ToFieldValue(gridSettings);
+        parameters[fieldName] = new Sitecore.Support.XA.Foundation.Grid.Model.GridDefinition(gridDefinitionItem).InstantiateGridFieldParser().ToFieldValue(gridSettings);
       }
       else
       {
