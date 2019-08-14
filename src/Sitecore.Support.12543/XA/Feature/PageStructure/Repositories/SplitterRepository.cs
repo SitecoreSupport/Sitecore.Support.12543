@@ -4,7 +4,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Sitecore.Data.Items;
 using Sitecore.XA.Feature.PageStructure.Models;
 using Sitecore.XA.Foundation.Grid;
-using Sitecore.XA.Foundation.Grid.Model;
 using Sitecore.XA.Foundation.Grid.Parser;
 
 namespace Sitecore.Support.XA.Feature.PageStructure.Repositories
@@ -21,7 +20,7 @@ namespace Sitecore.Support.XA.Feature.PageStructure.Repositories
         return null;
       }
 
-      GridDefinition gridDefinition = new GridDefinition(gridDefinitionItem);
+      var gridDefinition = new Sitecore.Support.XA.Foundation.Grid.Model.GridDefinition(gridDefinitionItem);
       IGridFieldParser parser = gridDefinition.InstantiateGridFieldParser();
 
 
