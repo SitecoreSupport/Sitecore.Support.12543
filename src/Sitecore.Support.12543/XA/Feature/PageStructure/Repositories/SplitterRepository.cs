@@ -11,7 +11,7 @@ namespace Sitecore.Support.XA.Feature.PageStructure.Repositories
   public class SplitterRepository : Sitecore.XA.Feature.PageStructure.Repositories.SplitterRepository
   {
     private const string EnabledPlaceholders = "EnabledPlaceholders"; //because Sitecore.XA.Feature.PageStructure.Constants is internal
-    protected override List<string> GetColumnsStyles()
+    protected override IList<string> GetColumnsStyles()
     {
       Item gridDefinitionItem = Sitecore.DependencyInjection.ServiceLocator.ServiceProvider.GetService<IGridContext>().GetGridDefinitionItem(Context.Item, Context.Device);
 

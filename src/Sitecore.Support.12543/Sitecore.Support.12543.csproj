@@ -54,40 +54,44 @@
       <HintPath>..\packages\SC.Sitecore.Kernel.9.0.1\lib\Sitecore.Kernel.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.XA.Feature.CreativeExchange, Version=2.6.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SXA82.Sitecore.XA.Feature.CreativeExchange.1.6.0\lib\Sitecore.XA.Feature.CreativeExchange.dll</HintPath>
+    <Reference Include="Sitecore.XA.Feature.CreativeExchange, Version=3.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SXA90.Sitecore.XA.Feature.CreativeExchange.1.7.0\lib\Sitecore.XA.Feature.CreativeExchange.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.XA.Feature.PageStructure, Version=2.6.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SXA82.Sitecore.XA.Feature.PageStructure.1.6.0\lib\Sitecore.XA.Feature.PageStructure.dll</HintPath>
+    <Reference Include="Sitecore.XA.Feature.PageStructure, Version=3.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SXA90.Sitecore.XA.Feature.PageStructure.1.7.0\lib\Sitecore.XA.Feature.PageStructure.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.XA.Foundation.Common">
-      <HintPath>..\packages\SXA82.Sitecore.XA.Foundation.Common.1.6.0\lib\Sitecore.XA.Foundation.Common.dll</HintPath>
+    <Reference Include="Sitecore.XA.Foundation.Abstractions, Version=3.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SXA90.Sitecore.XA.Foundation.Abstractions.1.7.0\lib\Sitecore.XA.Foundation.Abstractions.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.XA.Foundation.DynamicPlaceholders, Version=2.6.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SXA82.Sitecore.XA.Foundation.DynamicPlaceholders.1.6.0\lib\Sitecore.XA.Foundation.DynamicPlaceholders.dll</HintPath>
+    <Reference Include="Sitecore.XA.Foundation.Common, Version=3.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SXA90.Sitecore.XA.Foundation.Common.1.7.0\lib\Sitecore.XA.Foundation.Common.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.XA.Foundation.Grid, Version=2.6.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SXA82.Sitecore.XA.Foundation.Grid.1.6.0\lib\Sitecore.XA.Foundation.Grid.dll</HintPath>
+    <Reference Include="Sitecore.XA.Foundation.DynamicPlaceholders, Version=3.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SXA90.Sitecore.XA.Foundation.DynamicPlaceholders.1.7.0\lib\Sitecore.XA.Foundation.DynamicPlaceholders.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.XA.Foundation.IoC, Version=2.6.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SXA82.Sitecore.XA.Foundation.IoC.1.6.0\lib\Sitecore.XA.Foundation.IoC.dll</HintPath>
+    <Reference Include="Sitecore.XA.Foundation.Grid, Version=3.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SXA90.Sitecore.XA.Foundation.Grid.1.7.0\lib\Sitecore.XA.Foundation.Grid.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.XA.Foundation.MarkupDecorator, Version=2.6.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SXA82.Sitecore.XA.Foundation.MarkupDecorator.1.6.0\lib\Sitecore.XA.Foundation.MarkupDecorator.dll</HintPath>
+    <Reference Include="Sitecore.XA.Foundation.IoC, Version=3.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SXA90.Sitecore.XA.Foundation.IoC.1.7.0\lib\Sitecore.XA.Foundation.IoC.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.XA.Foundation.Mvc, Version=2.6.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SXA82.Sitecore.XA.Foundation.Mvc.1.6.0\lib\Sitecore.XA.Foundation.Mvc.dll</HintPath>
+    <Reference Include="Sitecore.XA.Foundation.MarkupDecorator, Version=3.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SXA90.Sitecore.XA.Foundation.MarkupDecorator.1.7.0\lib\Sitecore.XA.Foundation.MarkupDecorator.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.XA.Foundation.SitecoreExtensions, Version=2.6.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SXA82.Sitecore.XA.Foundation.SitecoreExtensions.1.6.0\lib\Sitecore.XA.Foundation.SitecoreExtensions.dll</HintPath>
+    <Reference Include="Sitecore.XA.Foundation.Mvc, Version=3.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SXA90.Sitecore.XA.Foundation.Mvc.1.7.0\lib\Sitecore.XA.Foundation.Mvc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.XA.Foundation.SitecoreExtensions, Version=3.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SXA90.Sitecore.XA.Foundation.SitecoreExtensions.1.7.0\lib\Sitecore.XA.Foundation.SitecoreExtensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />

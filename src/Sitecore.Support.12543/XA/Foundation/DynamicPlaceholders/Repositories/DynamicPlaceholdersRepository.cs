@@ -10,7 +10,7 @@
 
   public class DynamicPlaceholdersRepository : Sitecore.XA.Foundation.DynamicPlaceholders.Repositories.DynamicPlaceholdersRepository
   {
-    protected override List<string> GetColumnsStyles()
+    protected override IList<string> GetColumnsStyles()
     {
       Item gridDefinitionItem = Sitecore.DependencyInjection.ServiceLocator.ServiceProvider.GetService<IGridContext>().GetGridDefinitionItem(Context.Item, Context.Device);
       if (gridDefinitionItem == null)
